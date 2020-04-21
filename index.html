@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Adhoc: an informal avenue for systems hackers to show off their work</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+  <div class="container">
+    <div class="row" style="margin-top: 5%">
+      <h4>Adhoc: a virtual event for low-level and systems-oriented engineers.</h4>
+      <b>When?</b><br>
+      Our first virtual event will this April 23rd at 4PM ET / 8PM UTC.<br><br>
+      <b>Where?</b><br>
+      The event will be live streamed on YouTube. Questions are accepted and moderated
+      through chat. <b>Be on the lookout for the link here!</b>
+      <b>Who?</b><br>
+      We have 4 great speakers lined up. See below.<br><br>
+      <b>Who is organizing this?</b><br>
+      This is a personal project of <a href="https://pvk.ca">Paul Khuong</a>, <a href="http://repnop.org">Samy Al Bahra</a> and
+      <a href="#">Jessica Natoli</a>. Thanks to <a href="https://backtrace.io">Backtrace</a> for sponsoring the event.
+<hr>
+     </div>
+      <h3>4 lightning talks, 15 minutes each.</h3>
+     <div class="row">
+              <h4>1. Getting storage engines ready for fast storage devices</h4>
+              </p>
+	      <p><b>Speaker</b><br>
+              <a href="https://www.ece.ubc.ca/~sasha/">Alexandra (Sasha) Fedorova</a>
+              </p>
+	      <p><b>Summary</b><br>
+	      Sasha will share with us her experiences optimizing the MongoDB storage engine
+	      for modern fast storage devices. Sasha brings with her a wealth of experience
+	      with significant contributions to NUMA, memory allocators,
+	      databases and more.
+	      </p>
+	      <p><b>Recommended reading before attending</b><br>
+	      - <a href="https://engineering.mongodb.com/post/getting-storage-engines-ready-for-fast-storage-devices">https://engineering.mongodb.com/post/getting-storage-engines-ready-for-fast-storage-devices</a><br>
+	      - <a href="https://medium.com/@sasha_f/why-mmap-is-faster-than-system-calls-24718e75ab37">https://medium.com/@sasha_f/why-mmap-is-faster-than-system-calls-24718e75ab37</a>
+              </p>
+              <hr>
+              <h4>2. Making safe memory reclamation a feature of your memory allocator</h4>
+              </p>
+	      <p><b>Speaker</b><br>
+              <a href="#">Jeffrey Roberson</a>
+              </p>
+	      <p><b>Summary</b><br>
+              Jeff Roberson will share with us his experiences in the design and implementation
+              of a novel safe memory reclamation mechanism that integrates directly into the FreeBSD
+              kernel memory allocator. This is an alternative to RCU and epoch reclamation for many
+              use-cases and is able to achieve 2X-6X better performance! Jeff has made significant contributions
+              to open-source and is the author of the <a href="https://papers.freebsd.org/2003/BSDCon/jeff-ule_scheduler.files/jeff-ule_scheduler-paper.pdf">FreeBSD ULE scheduler</a>.
+	      </p>
+	      <p><b>Recommended reading before attending</b><br>
+- <a href="https://svnweb.freebsd.org/base/head/sys/kern/subr_smr.c?view=markup&pathrev=358400">subr_smr.c</a><br>
+- <a href="https://svnweb.freebsd.org/base/head/sys/sys/smr.h?revision=358400&view=markup">smr.h</a>
+              </p>
+<hr>
+              <h4>3. A 15-minute history of task isolation on Linux</h4>
+              </p>
+	      <p><b>Speaker</b><br>
+              <a href="https://www.codeblueprint.co.uk/">Matt Fleming</a>
+              </p>
+	      <p><b>Summary</b><br>
+                Many high-performance and real-time scenarios need to run
+		tasks without interruption from either other tasks or the underlying
+		kernel, and task isolation has been a common feature in RTOSes for
+		years. Linux has improved its support for this use case for a long
+		time and each improvement has brought the goal of running userspace
+		tasks without interruption closer to reality. This talk will briskly
+		cover the last 18 years of Linux kernel development relating to task
+		isolation, finishing with the state of the art today and the latest
+		version of the "task_isolation mode" patches on the Linux kernel
+		mailing list. Expect some Linux kernel development history and
+		explanation of kernel internals.<br><br>Matt is a senior
+performance engineer at SuSE and has made several significant contributions
+including improving <a href="https://lore.kernel.org/lkml/20190808195301.13222-3-matt@codeblueprint.co.uk/">Linux kernel scheduler performance by up to 20% for AMD EPYC</a>.
+	      </p>
+	      <p><b>Recommended reading before attending</b><br>
+- <a href="https://lore.kernel.org/linux-api/07c25c246c55012981ec0296eee23e68c719333a.camel@marvell.com/">https://lore.kernel.org/linux-api/07c25c246c55012981ec0296eee23e68c719333a.camel@marvell.com/"></a><br>
+- <a href="https://lwn.net/Articles/816298/">https://lwn.net/Articles/816298/</a><br>
+- <a href="https://lwn.net/Articles/659490/">https://lwn.net/Articles/659490/</a><br>
+- <a href="https://documentation.suse.com/sle-rt/15-SP1/single-html/SLE-RT-shielding/#book-slert-shielding">https://documentation.suse.com/sle-rt/15-SP1/single-html/SLE-RT-shielding/#book-slert-shielding</a>
+              </p>
+              <hr>
+              <h4>4. jitmap, an execution engine for bitmap expressions.</h4>
+              </p>
+	      <p><b>Speaker</b><br>
+              <a href="http://github.com/fsaintjacques">Francois Saint-Jacques</a>
+              </p>
+	      <p><b>Summary</b><br>
+jitmap is a small library providing an execution engine for logical binary
+expressions on bitmaps. Some examples where this is relevant:<br><br>
+
+* In search engines, posting lists (sorted sequences of integers) are encoded
+  with bitmaps. Evaluating a search query (logical expression on
+  keywords) can be implemented with logical expression on bitmaps.<br>
+* In columnar databases, selection vectors (index masks) are encoded with
+  bitmaps, the results of predicate on column expressions. The bitmaps are then
+  combined in a final bitmap.<br>
+* In stream processing systems with rule engines, e.g. adtech bid requests
+  filtering with campaign rules, bitmaps are used as a first-pass optimization
+  to lower the number of (costly) rules to evaluate on each incoming event.<br><br>
+
+jitmap compiles logical expressions into native functions with signature
+<code>void fn(const char**, char*)</code>. The functions are optimized to minimize memory
+transfers via operator fusion and uses the fastest vector instruction
+set provided by the host. Francois works full time on R Studio on Apache Arrow
+and otherwise has worked on columnar database internals for several years now.
+	      </p>
+	      <p><b>Recommended reading before attending</b><br>
+- The code itself: <a href="https://github.com/fsaintjacques/jitmap">https://github.com/fsaintjacques/jitmap</a><br>
+- Faster Population Counts Using AVX2 Instructions: <a href="https://arxiv.org/pdf/1611.07612.pdf">https://arxiv.org/pdf/1611.07612.pdf</a><br>
+- LLVM Tree-Height-Reduction optimization pass: <a href="https://reviews.llvm.org/D67383">https://reviews.llvm.org/D67383</a>
+              </p>
+
+    </div>
+  </div>
+</body>
+</html>
